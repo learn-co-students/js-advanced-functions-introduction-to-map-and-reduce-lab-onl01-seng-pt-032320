@@ -48,18 +48,24 @@ function mapToNegativize(src) {
   }
 
   function reduceToAllTrue(sourceArray) {
-    let value
+    let value = true 
     for (let i = 0; i < sourceArray.length; i++ ) {
-        if (sourceArray[i] === 0 || sourceArray[i] === false || ) {
+        if (sourceArray[i] === 0 || sourceArray[i] === false) {
             value = false
-        }
-        else {
-            value =  true 
+            break
         }
       }
       return value
   }
 
   function reduceToAnyTrue(sourceArray) {
-
+    let value = false 
+    for (let i = 0; i < sourceArray.length; i++ ) {
+        if (sourceArray[i]) {
+            value = true
+            break
+        }
+      }
+      return value
   }
+  
